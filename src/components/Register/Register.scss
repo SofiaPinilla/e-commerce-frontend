@@ -1,0 +1,52 @@
+@import "../../colors.scss";
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  form {
+    padding: 1em;
+    -webkit-box-shadow: 5px 5px 15px 5px $secondaryColor;
+    box-shadow: 5px 5px 15px 5px $secondaryColor;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5em;
+    width: 30%;
+    input {
+      all: unset;
+      background-color: $secondaryColor;
+      color: $primaryColor;
+      padding: 0 20px;
+      height: 42px;
+      border-radius: 42px;
+    }
+    button {
+      all: unset;
+      background-color: $primaryColor;
+      padding: 0 20px;
+      height: 42px;
+      border-radius: 42px;
+      width:  65%;
+      margin: 1em;
+      cursor: pointer;
+    }
+    button :hover {
+      animation: pulse-animation 2s infinite;
+    }
+  }
+  input:focus {
+    background-color: $greenColor;
+  }
+}
+
+@keyframes pulse-animation {
+  0% {
+    box-shadow: 0 0 0 0px #dae0f2;
+  }
+  100% {
+    box-shadow: 0 0 0 20px rgba(0, 0, 0, 0);
+  }
+}
